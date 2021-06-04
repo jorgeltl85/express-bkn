@@ -1,0 +1,51 @@
+//1 obtenerUsuarios
+GET http://localhost:9000/api/obtenerUsuarios HTTP/1.1
+
+###
+
+//2 obtenerUsuario
+GET http://localhost:9000/api/obtenerUsuario/1 HTTP/1.1
+
+###
+
+//3 crearUsuario
+POST http://localhost:9000/api/crearUsuario HTTP/1.1
+content-type: application/json
+
+{
+    "usuario" : "sangolotunia",
+    "nombre" : "Sangolotunia Sevillano",
+    "email" : "sangolotunia@gmail.com",
+    "clave" : "jorgeluis"
+}
+
+###
+
+//4 actualizarUsuario
+PUT http://localhost:9000/api/actualizarUsuario/1 HTTP/1.1
+content-type: application/json
+
+{
+    "usuario" : "jorgeluis",
+    "nombre" : "Jorge Luis Tufiño Lopez",
+    "email" : "jorgeluis.tufino@gmail.com",
+    "clave" : "jorgeluis"
+}
+
+###
+
+//5 eliminarUsuario
+DELETE  http://localhost:9000/api/eliminarUsuario/20 HTTP/1.1
+content-type: application/json
+
+
+###
+//6 validar usuario
+// debe tener una linea de espacio en blanco
+POST http://localhost:9000/api/validarUsuario HTTP/1.1
+content-type: application/json
+
+{
+    "usuario" : "jorgeluis",
+    "clave" : "jorgeluis"
+}
